@@ -51,12 +51,17 @@ def match_strings_from_file(file, patterns):
 def main():
     # TODO - add patterns to this list
     patterns = [
-        (r'^\d+$', 'integer'),
-        (r'^\d+\.\d+$', 'real number'),
+        (r'^\d+$', 'Integer'),
+        (r'^\d+\.\d+$', 'Real number'),
+        (r'^\d{1,5}\s?[a-zA-z]+\.?(\s+[A-Za-z]*\.?)*$', 'Address'),
+        (r'^\$\d{1,3}(,{1}\d{3})*\.\d{2}', 'Price'),
+        (r'^((\+?234)\s?|0)(((7)0)|((8|9)(0|1)))\d{8}', 'Phone Number'),
+        (r'^\w+(\.|_|-)?\w*@\w+(\.|-)?(\w*\.?)*(edu|wheeeee)$', 'Email Address'),
+        (r'^[A-za-z_][A-za-z0-9]*$', 'C identifier'),
+        (r'^[A-Z]{4}-[0-9]{5}-[0-9]{2}', 'Course Identifier')
     ]
 
-    # if a filename is supplied on the command line, read strings from that
-    # file
+    # if a filename is supplied on the command line, read strings from that file
     if len(sys.argv) == 2:
         with open(sys.argv[1]) as f:
             match_strings_from_file(f, patterns)
@@ -72,5 +77,3 @@ def main():
 
 
 main()
-
-# C:/User/Desktop/Ex.A.M campaigns3uu
