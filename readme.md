@@ -6,3 +6,8 @@ When run without any arguments, line will be read from standard input.
 If given a filename, lines will be read from that file.
 
 Source: http://csweb.wooster.edu/nsommer/cs220/python-regular-expressions.html
+
+N.B: Since I am writing this from Nigeria, I wrote the regualr expressions for 
+Nigerian Phone numbers instead of the provided American numbers. So it recognizes
+the following Nigerian phone no formats: 07012345678, 08012345678, 09012345678,
+2347012345678, +2347012345678
