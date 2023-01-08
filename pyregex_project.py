@@ -51,7 +51,7 @@ def match_strings_from_file(file, patterns):
 def main():
     # TODO - add patterns to this list
     patterns = [
-        (r'^\d+$', 'Integer'),
+        # (r'^\d+$', 'Integer'),
         (r'^\d+\.\d+$', 'Real number'),
         (r'^\d{1,5}\s?[a-zA-z]+\.?(\s+[A-Za-z]*\.?)*$', 'Address'),
         (r'^\$\d{1,3}(,{1}\d{3})*\.\d{2}', 'Price'),
